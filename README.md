@@ -55,8 +55,8 @@ ANNOT: data are not persistent with this simple setup via docker ...
 
 ## unit tests
 ```
-cd .\bryggetestlogin\
-cd .\backend\
+cd bryggetestlogin
+cd backend
 pytest
 ```
 ---
