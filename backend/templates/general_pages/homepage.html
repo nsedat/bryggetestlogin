@@ -1,0 +1,26 @@
+{% extends "shared/base.html" %}
+
+
+{% block title %}
+<title>Brygge Test Login</title>
+{% endblock %}
+
+{% block content %}
+{% with msg=msg %}
+{% include "components/alerts.html" %}
+{% endwith %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2 class="display-5">
+        {% if info %}
+        {{info}} <br>
+        {% endif %}
+      </h2>
+      <h5 class="display-10">
+        <br><br><br>... blablabla Seiteninhalt ...
+      </h5>
+    </div>
+  </div>
+</div>
+{% endblock %}
