@@ -29,7 +29,7 @@ async def register(request: Request, db: Session = Depends(get_db)):
 		user = UserCreate(username=form.username, email=form.email, password=form.password)
 		try:
 			user = create_new_user(user=user, db=db)
-			return responses.RedirectResponse("/?msg=Successfully-Registered", status_code=status.HTTP_302_FOUND)  # default is post request, to use get request added status code 302
+			return responses.RedirectResponse("/?msg=erfolgreich registriert", status_code=status.HTTP_302_FOUND)  # default is post request, to use get request added status code 302
 		except IntegrityError:
 			form.__dict__.get("errors").append("Benutzername oder EMail schon vorhanden ...")
 			return templates.TemplateResponse("users/register.html", form.__dict__)

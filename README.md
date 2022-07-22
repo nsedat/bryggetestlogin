@@ -39,7 +39,7 @@ git clone https://github.com/nsedat/bryggetestlogin.git
 cd bryggetestlogin
 cd backend
 pip install -r requirements.txt
-uvicorn main:app --reload
+uvicorn main:app --host 0.0.0.0 --port 8000
 visit http://127.0.0.1:8000/ with your browser
 ```
 
