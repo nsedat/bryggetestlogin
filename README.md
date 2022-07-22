@@ -49,7 +49,7 @@ get Dockerfile from https://github.com/nsedat/bryggetestlogin.git
 docker build -t bryggetestlogin .
 docker run --rm -it -p 8000:8000 bryggetestlogin
 visit http://127.0.0.1:8000/ with your browser
-ANNOT: data are not persistent with this simple setup via docker ...
+ANNOT: data may not be persistent with this simple setup via docker ...
 ```
 
 
@@ -64,7 +64,7 @@ pytest
 ## annots:
 * only basic implementation to show technology
 * no comments in code - because classes, functions and logic should be self explanatory; if not: refactor
-* no use of venv because intended to be running in dockerized environment
+* **after starting up web interface you'll find two links on the top right to access the API documentation**
 * using sqlite (for smaller footprint here - but in live environment it should use mongodb)
 * no i18n and localization (german only)
 
