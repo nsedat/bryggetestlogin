@@ -24,8 +24,9 @@ async def home(request: Request, db: Session = Depends(get_db), msg: str = None)
 		current_user: User = get_current_user_from_token(token=param, db=db)
 	except HTTPException:
 		current_user = None
-	username = 'unbekannter Nutzer'
 	if current_user:
 		username = current_user.username
-	info = "Hallo " + username
+		info = "Hallo " + username
+	else:
+		info = 'sie sind nicht eingeloggt : bitte anmelden oder registrieren'
 	return templates.TemplateResponse("general_pages/homepage.html", {"request": request, "msg": msg, "info": info})
