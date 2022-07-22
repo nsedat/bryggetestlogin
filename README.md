@@ -49,6 +49,7 @@ get Dockerfile from https://github.com/nsedat/bryggetestlogin.git
 docker build -t bryggetestlogin .
 docker run --rm -it -p 8000:8000 bryggetestlogin
 visit http://127.0.0.1:8000/ with your browser
+ANNOT: data are not persistent with this simple setup via docker ...
 ```
 
 
