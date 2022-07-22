@@ -43,6 +43,15 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 visit http://127.0.0.1:8000/ with your browser
 ```
 
+or using docker:
+```
+get Dockerfile from https://github.com/nsedat/bryggetestlogin.git
+docker build -t bryggetestlogin .
+docker run --rm -it -p 8000:8000 bryggetestlogin
+visit http://127.0.0.1:8000/ with your browser
+```
+
+
 ## unit tests
 ```
 cd .\bryggetestlogin\
