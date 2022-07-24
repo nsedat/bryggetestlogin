@@ -12,4 +12,6 @@ router = APIRouter()
 @router.post("/", response_model=ShowUser)
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
 	user = create_new_user(user=user, db=db)
+	if user == None:
+		print("ERROR: couldn't insert new user ... may be already present with keys...")
 	return user
